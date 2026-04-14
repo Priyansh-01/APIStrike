@@ -91,9 +91,7 @@ python main.py --url https://api.example.com --token1 "Bearer eyJ..." --skip rat
 [+] Report saved → report.html
 ```
 
-> The HTML report looks like this — each finding includes severity, description, request/response details, and remediation advice.
-
-![APIStrike Report](https://i.imgur.com/placeholder.png)
+> The HTML report includes severity-rated findings, plain-English descriptions, request/response details, and remediation advice for each issue.
 
 ---
 
