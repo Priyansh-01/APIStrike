@@ -71,6 +71,32 @@ python main.py --url https://api.example.com --token1 "Bearer eyJ..." --skip rat
 
 *Either `--token1` or (`--login-url` + `--username` + `--password`) is required.
 
+## Example Output
+
+```
+[*] Target: https://api.example.com
+[*] Logging in via https://api.example.com/auth/login ...
+[*] Token1 acquired: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6...
+[*] Loaded 24 endpoints
+
+[*] BOLA/IDOR: 3 issue(s) found
+[*] Auth Bypass: 2 issue(s) found
+[*] Mass Assignment: 1 issue(s) found
+[*] Rate Limiting: 1 issue(s) found
+[*] Data Exposure: 0 issue(s) found
+[*] GraphQL: 2 issue(s) found
+
+[+] Total findings: 9
+[!] 5 HIGH/CRITICAL issue(s) found — exiting with code 1
+[+] Report saved → report.html
+```
+
+> The HTML report looks like this — each finding includes severity, description, request/response details, and remediation advice.
+
+![APIStrike Report](https://i.imgur.com/placeholder.png)
+
+---
+
 ## CI/CD Integration
 
 APIStrike exits with code `1` if any HIGH or CRITICAL findings are detected, making it easy to fail pipelines on serious issues.
