@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+report*.html
+report*.json
+results*.json
+venv/
+.env
